@@ -2,7 +2,13 @@
 }
 .unused-class {
 }
+/* .unused-class-in-comment {
+} */
 .used-class-jsx {
 }
 .used-class-js {
+}
+.unused-duplicate-class {
+}
+.unused-duplicate-class {
 }

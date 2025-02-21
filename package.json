@@ -2,14 +2,16 @@
   "publisher": "djlynn03",
   "name": "css-sight",
   "displayName": "css-sight",
-  "description": "",
+  "description": "Remove unused CSS rulesets",
   "icon": "icon.png",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
-    "Other"
+    "Language Packs",
+    "Linters",
+    "Formatters"
   ],
   "contributes": {
     "commands": [
@@ -37,10 +39,13 @@
     "package": "webpack --mode production --devtool hidden-source-map",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
-    "copy-test-workspace": "xcopy src\\test\\test-workspace out\\test\\test-workspace /s /i /q /y",
+    "copy-test-workspace": "cp -r src/test/test-workspace out/test/test-workspace",
+    "copy-test-workspace-windows": "xcopy src\\test\\test-workspace out\\test\\test-workspace /s /i /q /y",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "npm run copy-test-workspace && vscode-test"
+    "test": "npm run copy-test-workspace && vscode-test",
+    "test-windows": "npm run copy-test-workspace-windows && vscode-test",
+    "deploy": "vsce publish --yarn"
   },
   "devDependencies": {
     "@types/babel__traverse": "^7.20.6",
