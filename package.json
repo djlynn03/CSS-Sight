@@ -3,8 +3,13 @@
   "name": "css-sight",
   "displayName": "css-sight",
   "description": "Remove unused CSS rulesets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djlynn03/CSS-Sight"
+  },
+  "license": "MIT",
   "icon": "icon.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -12,6 +17,16 @@
     "Language Packs",
     "Linters",
     "Formatters"
+  ],
+  "keywords": [
+    "css",
+    "css-sight",
+    "lint",
+    "class",
+    "unused",
+    "clean",
+    "format",
+    "formatter"
   ],
   "contributes": {
     "commands": [
