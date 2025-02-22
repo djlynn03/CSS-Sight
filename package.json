@@ -60,7 +60,7 @@
     "lint": "eslint src",
     "test": "npm run copy-test-workspace && vscode-test",
     "test-windows": "npm run copy-test-workspace-windows && vscode-test",
-    "deploy": "vsce publish --yarn"
+    "deploy": "vsce publish"
   },
   "devDependencies": {
     "@types/babel__traverse": "^7.20.6",
