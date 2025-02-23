@@ -71,6 +71,12 @@ export async function removeAllUnusedSelectorsInFileFunction() {
     return;
   }
 
+  if (activeEditor.document.languageId !== "css") {
+    console.error("Not a CSS file");
+    await vscode.window.showErrorMessage("Not a CSS file");
+    return;
+  }
+
   const document = activeEditor.document;
   const otherFiles = await getOtherFiles();
 

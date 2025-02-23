@@ -19,8 +19,8 @@ suite("Commands Test Suite", () => {
   });
 
   test("Should find CSS and HTML files in test workspace", async () => {
-    const htmlFiles = await vscode.workspace.findFiles("**/*.html");
-    const cssFiles = await vscode.workspace.findFiles("**/*.css");
+    const htmlFiles = await vscode.workspace.findFiles("**/*.html", await testable.extractor.buildIgnoreGlob());
+    const cssFiles = await vscode.workspace.findFiles("**/*.css", await testable.extractor.buildIgnoreGlob());
 
     assert.equal(htmlFiles.length, 1, "Expected to find 1 HTML file");
     assert.equal(cssFiles.length, 2, "Expected to find 1 CSS file");
@@ -55,10 +55,10 @@ suite("Commands Test Suite", () => {
   test("removeAllUnusedSelectorsInFileFunction should remove all unused CSS selectors in file", async () => {
     await vscode.commands.executeCommand("workbench.action.closeAllEditors");
 
-    const htmlFiles = await vscode.workspace.findFiles("**/*.html");
-    const cssFiles = await vscode.workspace.findFiles("**/*.css");
-    const jsFiles = await vscode.workspace.findFiles("**/*.js");
-    const jsxFiles = await vscode.workspace.findFiles("**/*.jsx");
+    const htmlFiles = await vscode.workspace.findFiles("**/*.html", await testable.extractor.buildIgnoreGlob());
+    const cssFiles = await vscode.workspace.findFiles("**/*.css", await testable.extractor.buildIgnoreGlob());
+    const jsFiles = await vscode.workspace.findFiles("**/*.js", await testable.extractor.buildIgnoreGlob());
+    const jsxFiles = await vscode.workspace.findFiles("**/*.jsx", await testable.extractor.buildIgnoreGlob());
 
     assert.equal(htmlFiles.length, 1);
     assert.equal(cssFiles.length, 2);
@@ -83,10 +83,10 @@ suite("Commands Test Suite", () => {
   test("removeAllUnusedSelectorsInWorkspaceFunction should remove all unused CSS selectors in workspace", async () => {
     await vscode.commands.executeCommand("workbench.action.closeAllEditors");
 
-    const htmlFiles = await vscode.workspace.findFiles("**/*.html");
-    const cssFiles = await vscode.workspace.findFiles("**/*.css");
-    const jsFiles = await vscode.workspace.findFiles("**/*.js");
-    const jsxFiles = await vscode.workspace.findFiles("**/*.jsx");
+    const htmlFiles = await vscode.workspace.findFiles("**/*.html", await testable.extractor.buildIgnoreGlob());
+    const cssFiles = await vscode.workspace.findFiles("**/*.css", await testable.extractor.buildIgnoreGlob());
+    const jsFiles = await vscode.workspace.findFiles("**/*.js", await testable.extractor.buildIgnoreGlob());
+    const jsxFiles = await vscode.workspace.findFiles("**/*.jsx", await testable.extractor.buildIgnoreGlob());
 
     assert.equal(htmlFiles.length, 1);
     assert.equal(cssFiles.length, 2);

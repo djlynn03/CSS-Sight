@@ -1,7 +1,7 @@
 {
   "publisher": "djlynn03",
   "name": "css-sight",
-  "displayName": "css-sight",
+  "displayName": "CSS Sight",
   "description": "Remove unused CSS rulesets",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "icon": "icon.png",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.96.0"
   },

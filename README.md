@@ -4,7 +4,7 @@ Remove unused CSS rulesets.
 
 ## Features
 
-Highlights CSS rulesets that be unused based on results from HTML, JS, TS, JSX, and TSX files.
+Highlights CSS rulesets that are unused across HTML, JS, TS, JSX, and TSX files in a workspace.
 
 ### `Remove Unused Selector`
 
@@ -19,6 +19,16 @@ Displays the number of removed rulesets.
 
 Command to remove every unused selector in the workspace.
 Displays the number of removed rulesets.
+
+### Notes
+
+The extension ignores the same files listed in `.gitignore`.
+
+### Roadmap
+
+- Ignore list for project files
+- SCSS/SASS support
+- Add "undo" action to success popup
 
 ## Contributing
 
@@ -38,3 +48,7 @@ If you encounter any issues with css-sight, please report them in the [issue tra
 ### 1.0.0
 
 Initial release of css-sight
+
+### 1.0.2
+
+Bugfixes

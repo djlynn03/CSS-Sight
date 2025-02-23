@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Watch for changes in relevant files
   const watcher = vscode.workspace.createFileSystemWatcher(
-    "**/*.{css,html,js,jsx,tsx}"
+    "**/*.{css,html,js,ts,jsx,tsx}"
   );
 
   watcher.onDidChange((_) => analyzeFiles(diagnosticCollection));
